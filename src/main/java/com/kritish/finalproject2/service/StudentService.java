@@ -34,5 +34,17 @@ public class StudentService {
     public void deleteStudent(Long id) {
         studentRepository.deleteById(id);
     }
+
+    //Update student
+    public void updateStudent(Long id, Student student) {
+        Optional<Student> studentOptional = studentRepository.findById(id);
+        if (studentOptional.isPresent()) {
+            studentRepository.save(student);
+        }
+        else {
+            System.out.println("Student not found");
+        }
+    }
+
 }
 
