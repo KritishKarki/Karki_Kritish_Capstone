@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" type="text/css" href="css/homepage.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#home">Home</a>
+    <a th:href="@{/student_list}">Students</a>
+    <div class="dropdown">
+        <button class="dropbtn">Teachers</button>
+        <div class="dropdown-content">
+            <a href="#">Raheem</a>
+            <a href="#">Roger</a>
+            <a href="#">Ms. Lewis</a>
+        </div>
+    </div>
+    <a th:href="@{/jobopenings}">Job Openings</a>
+    <div class="nav-buttons">
+        <button class="btn signup-btn" th:formaction="@{/signup}">Account</button>
+    </div>
+    <a th:href="@{/signup}">Sign Up</a>
+
+</div>
+
+<div class = "cnt">
+    <h1 style="color: #007BFF;">Welcome to Per Scholas</h1>
+    <img src="https://perscholas.org/wp-content/uploads/2025/02/30th-logo-1.png" alt="per scholas image">
+    <p style="text-align: center;"> <b>At Per Scholas</b>, we believe a thriving workforce starts with access to education.
+        Learn about Per Scholas and how we provide skills training to advance economic mobility for individuals across the United States.
+        More than <b>30,000 graduates </b> have launched successful careers in tech to date through our no-cost technical training.
+        We empower learners with rigorous training for tech careers, and connect skilled talent to leading businesses.
+    </p>
+</div>
+
+<h2 style="display: flex; justify-content: center; color: #007BFF;">Our Hardworking Team</h2>
+<div class="tile-list">
+    <div class="tile">
+        <p class="user-name">Raheem</p>
+        <p class="user-place">New York, USA</p>
+    </div>
+    <div class="tile">
+        <p class="user-name">Roger</p>
+        <p class="user-place">Los Angeles, USA</p>
+    </div>
+    <div class="tile">
+        <p class="user-name">Ms. Lewis</p>
+        <p class="user-place">London, UK</p>
+    </div>
+</div>
+
+<script src="../scripts/homepage.js"></script>
+
+</body>
+</html>
